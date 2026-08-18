@@ -1,8 +1,9 @@
-# Yimin Tang — China-accessible homepage mirror
+# Yimin Tang — original-layout homepage mirror
 
-A lightweight, responsive mirror of the public Google Sites homepage. The site
-ships its own images, documents, CSS, and JavaScript, so rendering never depends
-on Google-hosted assets.
+A static snapshot of the public Google Sites homepage that preserves its
+original layout. Images, fonts, stylesheets, the CV, slides, and the hosted
+project video are downloaded into this repository, so rendering the page does
+not depend on Google-hosted runtime assets.
 
 ## Deploy to Tencent EdgeOne Pages
 
@@ -23,9 +24,9 @@ domains are preview-oriented; a custom domain is the stable public entry point.
 ## Content synchronization
 
 GitHub Actions runs `scripts/sync_google_site.py` daily. The script fetches the
-public page, preserves semantic text and links, downloads Google-hosted images
-and public Drive PDFs into this repository, and commits only when the generated
-output changes. A push then triggers EdgeOne's connected-repository deployment.
+public page, removes Google Sites' runtime scripts, rewrites the original HTML
+to local assets, and commits only when the snapshot changes. A push then
+triggers GitHub Pages and any connected EdgeOne deployment.
 
 Run the same synchronization locally:
 
@@ -38,8 +39,6 @@ Then open <http://localhost:8080>.
 
 ## Accessibility notes for visitors in China
 
-The page itself has no Google runtime dependency. Links to YouTube, Google
-Calendar, NotebookLM, and other external Google properties remain clearly
-marked outbound links and may still be unavailable in some networks. Videos
-should be uploaded to an accessible provider separately if in-page playback is
-required.
+The page itself has no Google runtime dependency. YouTube embeds are shown as
+locally hosted posters that link to YouTube; those outbound links and other
+external Google properties may still be unavailable on some networks.

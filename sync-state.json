@@ -1,6 +1,6 @@
 {
-  "blocks": 62,
-  "content_sha256": "0f6205032bb671930ca1b51be7268d653e5b08f38af7694191d505b1e5a90349",
-  "images": 15,
+  "assets": 128,
+  "content_sha256": "aa37df37196dcbdb5560386b4ea7d93cf85797766e8311973001dbaa6b791a1c",
+  "mode": "original-static-snapshot",
   "source": "https://sites.google.com/view/yimintang/"
 }
