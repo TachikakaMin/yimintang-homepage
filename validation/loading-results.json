@@ -96,6 +96,9 @@
       "errors": []
     }
   ],
-  "deployed_site_version": 19,
-  "source_commit": "0f6ba8659d9b489aeccf44995821b9406a4705f1"
+  "source_commit": "0f6ba8659d9b489aeccf44995821b9406a4705f1",
+  "measured_site_version": 19,
+  "deployed_site_version": 20,
+  "deployed_source_commit": "ee581eee4ac7566f1c9c2067eeb1aabe1d4da8d6",
+  "cache_compatibility": "Static CSS and preview JS URLs carry a version marker; version 20 keeps the measured version 19 assets unchanged."
 }
