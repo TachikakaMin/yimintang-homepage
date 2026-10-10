@@ -1,0 +1,16 @@
+const frame=document.getElementById('scene'),play=document.getElementById('play'),timeline=document.getElementById('timeline'),speed=document.getElementById('speed'),status=document.getElementById('status');
+const buttons=[...document.querySelectorAll('.playback button')];
+let ready=false,state={simT:0,T:0,T_END:0,playing:false},dragging=false;
+const descriptions={dense:['High-density rearrangement','Robots rearrange stacked blocks across a densely occupied layout. Transparent buffer cells provide temporary storage while the system changes the arrangement.'],pyramid:['Layered pyramid','Robots move along the top rail plane and lift or lower colored blocks to assemble a layered pyramid.'],horse:['Horse structure','A recorded multi-robot trajectory builds a three-dimensional horse structure from stacked blocks.']};
+const active=window.activeScene;
+document.getElementById('scene-title').textContent=descriptions[active][0];document.getElementById('scene-copy').textContent=descriptions[active][1];document.querySelector(`[data-scene="${active}"]`).setAttribute('aria-current','page');
+const send=(cmd,value)=>frame.contentWindow.postMessage({lacamCmd:{cmd,value}},location.origin);
+buttons.forEach(b=>b.disabled=true);timeline.disabled=true;
+window.addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow||!e.data?.lacamState)return;state=e.data.lacamState;if(!ready){ready=true;buttons.forEach(b=>b.disabled=false);timeline.disabled=false;send('speed',Number(speed.value));send(matchMedia('(prefers-reduced-motion: reduce)').matches?'pause':'play');}timeline.max=state.T_END;if(!dragging)timeline.value=Math.floor(state.simT);document.getElementById('progress').textContent=`${Math.floor(state.simT)} / ${state.T_END}`;play.textContent=state.playing?'Pause':'Play';status.textContent=state.simT>=state.T_END?'Replay complete':state.playing?'Playing recorded trajectory':'Paused';});
+play.addEventListener('click',()=>send(state.playing?'pause':'play'));
+document.getElementById('reset').addEventListener('click',()=>send('reset'));
+document.getElementById('step').addEventListener('click',()=>send('seek',Math.min(state.T_END,Math.floor(state.simT)+1)));
+document.getElementById('end').addEventListener('click',()=>send('end'));
+speed.addEventListener('change',()=>send('speed',Number(speed.value)));
+timeline.addEventListener('input',()=>{dragging=true;send('seek',Number(timeline.value))});timeline.addEventListener('change',()=>{dragging=false;send('seek',Number(timeline.value))});
+setTimeout(()=>{if(!ready)status.textContent='The 3D viewer has not loaded. Try reloading this page in a browser with WebGL enabled.';},15000);

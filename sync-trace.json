@@ -1,0 +1,962 @@
+[
+  {
+    "path": "demos/autostore/app.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/app.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/autostore/dense.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/dense.html",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/autostore/explorer.css",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/explorer.css",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/explorer.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/explorer.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/horse.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/horse.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/index.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/index.html",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/autostore/plan.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/plan.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/autostore/plan_dense.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/plan_dense.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/autostore/plan_horse.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/plan_horse.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/pyramid.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/pyramid.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/report.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/report.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/scene-horse.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/scene-horse.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/scene-pyramid.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/scene-pyramid.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/site.css",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/site.css",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/autostore/style.css",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/style.css",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/autostore/three.min.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/autostore/three.min.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/app.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/app.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/brickcar.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/brickcar.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/brickchair.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/brickchair.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/brickguitar.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/brickguitar.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/brickpiano.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/brickpiano.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/bridge.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/bridge.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/brougham.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/brougham.html",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/colonnade.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/colonnade.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/column.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/column.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/goldengate.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/goldengate.html",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/horse.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/horse.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/index.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/index.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_brickcar.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_brickcar.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_brickchair.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_brickchair.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_brickguitar.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_brickguitar.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_brickpiano.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_brickpiano.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_bridge.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_bridge.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_brougham.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_brougham.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/plan_colonnade.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_colonnade.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_column.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_column.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_goldengate.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_goldengate.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/plan_horse.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_horse.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_scene.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_scene.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_temple.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_temple.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/plan_tommy.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_tommy.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/plan_uscgate.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/plan_uscgate.js",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/scene.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/scene.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/style.css",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/style.css",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/temple.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/temple.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "demos/construction/three.min.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/three.min.js",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/tommy.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/tommy.html",
+    "method": "public-site"
+  },
+  {
+    "path": "demos/construction/uscgate.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/demos/construction/uscgate.html",
+    "method": "demo-navigation-fallback"
+  },
+  {
+    "path": "index.html",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/index.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/app.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/app.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/dense.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/dense.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/explorer.css",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/explorer.css",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/explorer.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/explorer.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/gantry_pyramid_plan.json",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/gantry_pyramid_plan.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/horse.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/horse.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/index.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/index.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/plan.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/plan.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/plan_data.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/plan_data.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/plan_dense.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/plan_dense.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/plan_horse.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/plan_horse.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/pyramid.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/pyramid.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/report.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/report.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/scene-dense.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/scene-dense.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/scene-horse.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/scene-horse.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/scene-pyramid.html",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/scene-pyramid.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/site.css",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/site.css",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/style.css",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/style.css",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/autostore/three.min.js",
+    "source": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/three.min.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/index.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/index.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/BROUGHAM_BUILD_PLAN.md",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/BROUGHAM_BUILD_PLAN.md",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/SCAFFOLD_NOTES.md",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/SCAFFOLD_NOTES.md",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/app.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/app.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brick_brougham.txt",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brick_brougham.txt",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brick_car.txt",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brick_car.txt",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brick_chair.txt",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brick_chair.txt",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brick_guitar.txt",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brick_guitar.txt",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brick_piano.txt",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brick_piano.txt",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brickcar.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brickcar.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brickchair.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brickchair.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brickguitar.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brickguitar.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brickpiano.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brickpiano.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/bridge.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/bridge.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_app.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_app.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_bom.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_bom.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_build_plan.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_build_plan.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_build_plan.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_build_plan.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_draft.ldr",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_draft.ldr",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_draft.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_draft.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_geometry.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_geometry.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_model.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_model.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_model.ldr",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_model.ldr",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_model.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_model.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/brougham_exact_steps.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/brougham_exact_steps.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/colonnade.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/colonnade.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/column.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/column.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/goldengate.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/goldengate.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/horse.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/horse.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/index.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/index.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/logo-symbotic.svg",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/logo-symbotic.svg",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/logo-uci.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/logo-uci.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/logo-usc.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/logo-usc.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/paper_fig4_first_solution.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/paper_fig4_first_solution.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/paper_fig5_ir_soc.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/paper_fig5_ir_soc.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/paper_fig6_optimal_soc.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/paper_fig6_optimal_soc.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickcar.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickcar.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickcar.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickcar.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickcar_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickcar_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickchair.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickchair.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickchair.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickchair.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickchair_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickchair_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickguitar.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickguitar.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickguitar.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickguitar.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickguitar_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickguitar_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickpiano.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickpiano.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickpiano.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickpiano.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brickpiano_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brickpiano_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_bridge.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_bridge.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_bridge.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_bridge.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_bridge.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_bridge.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brougham.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brougham.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brougham.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brougham.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brougham.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brougham.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_brougham_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_brougham_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_colonnade.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_colonnade.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_colonnade.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_colonnade.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_colonnade.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_colonnade.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_column.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_column.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_column.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_column.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_column.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_column.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_goldengate.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_goldengate.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_goldengate.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_goldengate.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_goldengate.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_goldengate.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_goldengate_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_goldengate_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_horse.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_horse.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_horse.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_horse.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_horse.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_horse.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_scene.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_scene.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_scene.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_scene.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_scene.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_scene.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_symbot.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_symbot.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_symbot_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_symbot_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_temple.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_temple.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_temple.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_temple.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_temple.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_temple.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_tommy.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_tommy.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_tommy.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_tommy.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_tommy.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_tommy.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_tommy_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_tommy_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_uscgate.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_uscgate.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_uscgate.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_uscgate.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_uscgate.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_uscgate.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/plan_uscgate_3d.png",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/plan_uscgate_3d.png",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/project-i18n.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/project-i18n.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/project.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/project.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/scene.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/scene.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h2_helper.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h2_helper.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h2_helper.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h2_helper.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h2_plain.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h2_plain.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h2_plain.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h2_plain.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h3_helper.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h3_helper.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h3_helper.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h3_helper.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h3_plain.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h3_plain.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h3_plain.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h3_plain.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h4_helper.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h4_helper.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h4_helper.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h4_helper.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h4_plain.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h4_plain.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h4_plain.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h4_plain.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_helper.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_helper.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_helper.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_helper.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_helper_a12.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_helper_a12.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_helper_a12.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_helper_a12.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_plain.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_plain.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_plain.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_plain.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_plain_a12.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_plain_a12.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/study_h5_plain_a12.json",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/study_h5_plain_a12.json",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/style.css",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/style.css",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/symbot.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/symbot.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/temple.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/temple.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/three.min.js",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/three.min.js",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/tommy.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/tommy.html",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/scenes/uscgate.html",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/uscgate.html",
+    "method": "public-site"
+  },
+  {
+    "path": "photo0-transparent.png",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/photo0-transparent.png",
+    "method": "public-site"
+  },
+  {
+    "path": "photo0.jpg",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/photo0.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "portrait.jpg",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/portrait.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "preview.js",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/preview.js",
+    "method": "public-site"
+  },
+  {
+    "path": "responsive.css",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/responsive.css",
+    "method": "public-site"
+  },
+  {
+    "path": "robots.jpg",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/robots.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "style.css",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/style.css",
+    "method": "public-site"
+  }
+]

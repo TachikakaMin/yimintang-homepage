@@ -1,0 +1,71 @@
+/* Responsive layout also follows the available Google Sites iframe width. */
+html{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+main,section,article,.about-grid>div,.portrait-pair>img,.education>div,.experience-grid>div,.two-col>div,.intro-grid>*,.misc-columns>*,.personal-compact p>*{min-width:0}
+p,li,.paper h3,.education strong,.personal-compact a{overflow-wrap:anywhere}
+/* Use the actual container edges, avoiding 100vw scrollbar overflow. */
+.profile-intro:before{left:calc((100% - 100vw)/2 + 10px);right:calc((100% - 100vw)/2 + 10px);min-width:0}
+.demo-visual{height:auto;aspect-ratio:16/10}
+.demo-visual iframe,.lorr-video iframe{display:block}
+.preview-label{max-width:calc(100% - 24px);line-height:1.4}
+nav a,.hero-links>a,.links>a,#motion-toggle{min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:701px) and (max-width:1100px){
+ .wrap{width:calc(100% - 64px)}
+ header{width:calc(100% - 48px);gap:20px}nav{gap:18px}
+ .section{padding:72px 0}.section-label{margin-bottom:34px}
+ .about-grid{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:start}
+ .portrait{padding-top:55px}.portrait-pair{gap:10px}
+ h1{font-size:54px}.about-grid .large{font-size:18px}
+ .education{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.education strong{font-size:19px}
+ .experience-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+ .intro-grid,.two-col{gap:32px}.intro-grid h2{font-size:40px}
+ .showcase-grid{gap:34px 24px}.demo-description h3{font-size:24px}
+ .misc-columns{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px}
+ .personal-compact p{grid-template-columns:200px minmax(0,1fr);gap:20px}
+ .paper{grid-template-columns:120px minmax(0,1fr);gap:24px}
+}
+@media(max-width:700px){
+ .wrap,header{width:calc(100% - 40px)}
+ header{height:auto;min-height:0;flex-direction:column;align-items:stretch;gap:8px;padding:15px 0 8px}
+ .wordmark{font-size:21px}.wordmark span{display:inline}
+ nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:0 12px;font-size:13px}
+ .section{padding:48px 0}#about{padding-top:20px}
+ .section-label{margin-bottom:24px;font-size:11px;gap:12px;flex-wrap:wrap}.section-label span:last-child{display:none}
+ .about-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;margin-bottom:32px}
+ .about-grid>div:last-child{grid-column:1;grid-row:1}
+ .portrait{grid-column:1;grid-row:2;width:min(100%,390px);max-width:390px;padding-top:0;justify-self:center}
+ .portrait-pair{grid-template-columns:minmax(0,2.4fr) minmax(0,1fr);gap:16px}
+ .portrait .portrait-photo,.portrait .portrait-art{height:auto}
+ h1{font-size:clamp(40px,9vw,50px);letter-spacing:-1.8px;margin:14px 0 24px}
+ h2{font-size:clamp(30px,7vw,40px);letter-spacing:-1px;line-height:1.16}
+ h3{font-size:24px}.about-grid .large{font-size:18px}.about-grid .full-bio{font-size:15px}
+ .opening-quote{font-size:13px}.hero-links{gap:4px 20px}
+ .profile-intro:before{height:520px;bottom:auto;background-size:auto 470px;opacity:.1}
+ .education-section{padding-top:30px}.education,.two-col,.intro-grid,.showcase-grid,.misc-columns,.lorr-feature{grid-template-columns:minmax(0,1fr);gap:26px}
+ .education strong{font-size:21px}.education>div{padding-top:16px}
+ .experience{margin-top:36px;margin-bottom:36px}.experience-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 20px}
+ .experience-grid strong{font-size:18px}.experience-grid span{margin-bottom:6px}
+ .showcase{padding-top:30px}.showcase-heading{align-items:start;flex-direction:column;gap:10px}
+ .showcase-grid{gap:34px}.demo-visual{height:auto;aspect-ratio:4/3}.demo-description{padding-top:14px}.demo-description h3{font-size:24px}
+ #about .showcase{padding-bottom:38px}.research-view{padding:20px 0}.community{margin-top:36px}
+ .personal-compact p{grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0}
+ .lorr-feature{margin:24px 0;gap:16px}.lorr-feature h3{font-size:24px}
+ .paper{grid-template-columns:minmax(0,1fr);gap:10px;padding:22px 0}.paper h3{font-size:19px}.venue{font-size:12px}.links{gap:4px 20px;margin-top:8px}
+ .contact{padding:44px 0}.contact a{font-size:21px}.acknowledgements{padding-top:32px}
+ footer{flex-wrap:wrap;gap:10px 20px}footer span:nth-child(2){display:none}
+}
+@media(max-width:359px){
+ .wrap,header{width:calc(100% - 32px)}nav{gap:0 10px;font-size:12px}
+ .experience-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+ .experience-grid>div{padding-bottom:12px;border-bottom:1px solid var(--line)}
+}
+
+/* Reserve one date line so company names align within each grid row. */
+.experience-grid>div{position:relative;padding-top:33px}
+.experience-grid>div>span{position:absolute;top:0;left:0;margin:0;line-height:21px}
+@media(min-width:701px) and (max-width:1100px){.experience-grid>div:nth-child(n+4){padding-top:0}}
+@media(max-width:700px){.experience-grid>div:nth-child(n+3){padding-top:0}}
+@media(max-width:359px){.experience-grid>div:nth-child(n+2){padding-top:0}}
+
+/* Each venue, presentation and distinction gets its own line. */
+.paper .venue-line{display:block;line-height:1.6}.paper .venue-line+.venue-line{margin-top:6px}

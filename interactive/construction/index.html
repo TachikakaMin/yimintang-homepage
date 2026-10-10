@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITA-LaCAM: A Complete and Scalable TAPF Solver via Assignment-Aware Configuration-Space Search</title>
+<style>
+:root {
+  --bg: #f6f9fc;
+  --bg-soft: #eef2f7;
+  --ink: #0a0a0c;
+  --ink-soft: #6b6b74;
+  --line: #e3e8ee;
+  --card: #ffffff;
+  --code-bg: #eef2f7;
+  --accent: #2f6bff;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+.narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+/* ---------- top nav ---------- */
+nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246,249,252,.85); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+nav .wrap { display: flex; align-items: center; gap: 28px; height: 60px; }
+nav .brand { font-weight: 700; font-size: 19px; letter-spacing: -.02em; }
+nav a { color: var(--ink-soft); text-decoration: none; font-size: 15px; font-weight: 500; }
+nav a:hover { color: var(--ink); }
+nav .links { display: flex; gap: 24px; margin-left: auto; }
+.language-switch { margin-left: auto; display: flex; flex: none; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.language-switch button { border: 0; background: transparent; color: var(--ink-soft); padding: 6px 10px; border-radius: 999px; font: 500 13px var(--sans); cursor: pointer; }
+.language-switch button[aria-pressed="true"] { background: var(--ink); color: white; }
+.language-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+html[lang="zh-CN"] h1 { font-size: clamp(32px, 5vw, 58px); line-height: 1.3; }
+html[lang="zh-CN"] h2 { line-height: 1.3; }
+@media (min-width: 721px) and (max-width: 1000px) { nav .links { gap: 12px; } nav .wrap { gap: 14px; } }
+@media (max-width: 540px) { .ctrls { flex-wrap: wrap; gap: 10px; } .playerbar { gap: 4px; } .pbtn { padding: 7px 10px; font-size: 12px; } #gallery .wrap { overflow-x: auto; } }
+@media (max-width: 720px) { nav .links { display: none; } }
+
+/* ---------- hero ---------- */
+header { padding: 96px 0 40px; text-align: center; }
+.kicker { font-size: 15px; color: var(--ink-soft); margin-bottom: 22px; }
+h1 {
+  font-weight: 700; letter-spacing: -.035em;
+  font-size: clamp(40px, 6vw, 70px); line-height: 1.06; margin: 0 auto 30px;
+  max-width: 980px; text-wrap: balance;
+}
+.authors { font-size: 17.5px; color: var(--ink); line-height: 1.9; max-width: 760px; margin: 0 auto; }
+.authors sup { color: var(--ink-soft); font-size: 11px; }
+.affil { color: var(--ink-soft); font-size: 15.5px; margin-top: 8px; }
+.affiliation-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px 56px; max-width: 820px; margin: 32px auto 0; padding: 24px 28px; background: #fff; border-radius: 18px; }
+.affiliation-logos a { display: flex; align-items: center; justify-content: center; min-height: 54px; border-radius: 4px; }
+.affiliation-logos a:focus-visible { outline: 2px solid var(--accent); outline-offset: 8px; }
+.affiliation-logos img { display: block; height: auto; object-fit: contain; }
+.affiliation-logos .logo-usc { width: 232px; }
+.affiliation-logos .logo-uci { width: 166px; }
+.affiliation-logos .logo-symbotic { width: 176px; }
+@media (max-width: 600px) { .affiliation-logos { gap: 18px 28px; padding: 22px 18px; } .affiliation-logos .logo-usc { width: 206px; } .affiliation-logos .logo-uci { width: 142px; } .affiliation-logos .logo-symbotic { width: 154px; } }
+.btnrow { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 12px 26px; font-size: 16px; font-weight: 600;
+  color: var(--ink); text-decoration: none; background: var(--bg);
+  transition: all .15s ease;
+}
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn.primary:hover { opacity: .82; }
+
+/* ---------- sections ---------- */
+section { padding: 72px 0; }
+section.alt { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+h2 {
+  font-weight: 700; letter-spacing: -.03em;
+  font-size: clamp(31px, 3.9vw, 44px); line-height: 1.12; margin-bottom: 24px;
+}
+h3 { font-weight: 700; font-size: 22px; margin: 34px 0 12px; letter-spacing: -.01em; }
+p { margin-bottom: 16px; color: var(--ink); }
+p.lead { font-size: 22px; line-height: 1.55; font-weight: 500; letter-spacing: -.01em; }
+.muted { color: var(--ink-soft); }
+strong { font-weight: 700; }
+a.inline { color: var(--ink); text-decoration: underline; text-decoration-color: #b9b9c4; text-underline-offset: 3px; }
+a.inline:hover { text-decoration-color: var(--ink); }
+
+/* ---------- stat cards ---------- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 14px; margin: 36px 0 8px; }
+.stat {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 28px 24px; text-align: left;
+}
+.stat .num { font-size: 46px; font-weight: 700; letter-spacing: -.03em; line-height: 1; margin-bottom: 12px; }
+.stat .lbl { font-size: 15px; color: var(--ink-soft); line-height: 1.5; }
+
+/* ---------- demo player ---------- */
+.player {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden;
+}
+.player { position: relative; }
+.player iframe { display: block; width: 100%; height: min(72vh, 640px); border: 0; background: #f3f4f6; }
+.player.tall iframe { height: 86vh; }
+.playerbar { position: absolute; top: 14px; right: 14px; display: flex; gap: 8px; z-index: 5; }
+.pbtn {
+  border: 1px solid var(--line); background: rgba(255,255,255,.85);
+  color: var(--ink); border-radius: 999px; padding: 7px 16px; font-size: 14.5px; font-weight: 600;
+  cursor: pointer; font-family: var(--sans); backdrop-filter: blur(8px);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+}
+.pbtn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.ctrls {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-top: 1px solid var(--line); background: var(--card);
+}
+.cbtn {
+  border: 1px solid var(--line); background: var(--bg-soft); border-radius: 999px;
+  width: 38px; height: 38px; font-size: 15px; cursor: pointer; color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+}
+.cbtn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.ctrls input[type=range] { accent-color: var(--accent); }
+#ctlTimeline { flex: 1; min-width: 120px; }
+.tlab { font-family: var(--mono); font-size: 14px; color: var(--ink-soft); flex: none; min-width: 110px; text-align: right; }
+.slab { display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; color: var(--ink-soft); flex: none; }
+.slab input { width: 110px; }
+@media (max-width: 720px) { .tlab { display: none; } }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; border-top: 1px solid var(--line); }
+.chip {
+  border: 1px solid var(--line); background: #fff; border-radius: 999px;
+  padding: 8px 18px; font-size: 15px; font-weight: 500; color: var(--ink-soft); cursor: pointer;
+  transition: all .12s ease; font-family: var(--sans);
+}
+.chip:hover { border-color: var(--ink); color: var(--ink); }
+.chip.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.hint { font-size: 14.5px; color: var(--ink-soft); padding: 0 16px 14px; }
+
+/* ---------- gallery ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; margin-top: 32px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; cursor: pointer; text-decoration: none; color: var(--ink);
+  transition: border-color .12s ease;
+}
+.card:hover { border-color: var(--ink); }
+.card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; background: #eef2f6; }
+.card .cap { padding: 14px 16px; }
+.card .cap b { display: block; font-size: 16.5px; font-weight: 700; }
+.card .cap span { font-size: 14.5px; color: var(--ink-soft); }
+
+/* ---------- table ---------- */
+table { width: 100%; border-collapse: collapse; margin: 28px 0 10px; font-size: 16.5px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+th { font-size: 13px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: 0; }
+
+/* ---------- method cards ---------- */
+.method { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 32px; }
+.mcard { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+.mcard .step {
+  display: inline-flex; width: 30px; height: 30px; border-radius: 999px;
+  border: 1.5px solid var(--ink); color: var(--ink); align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; margin-bottom: 14px;
+}
+.mcard b { display: block; font-size: 19.5px; font-weight: 700; margin-bottom: 8px; letter-spacing: -.01em; }
+.mcard p { font-size: 16px; color: var(--ink-soft); margin: 0; }
+
+/* ---------- paper evidence ---------- */
+#results { background: #f5f5f7; border: 0; padding: 88px 0; }
+#results .wrap { max-width: 1280px; }
+.results-intro { max-width: 680px; }
+.results-intro h2 { margin-bottom: 14px; }
+.results-intro p { color: #6e6e73; font-size: 19px; line-height: 1.6; margin: 0; }
+.evidence { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.evidence-card { margin: 0; min-width: 0; }
+.figure-link { display: block; padding: 16px; background: #fff; border-radius: 18px; }
+.figure-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.evidence-card img { display: block; width: 100%; height: auto; aspect-ratio: 656 / 572; object-fit: contain; }
+.evidence-card figcaption { padding: 22px 2px 0; }
+.figure-label { display: block; color: #6e6e73; font-size: 12px; font-weight: 600; letter-spacing: .05em; margin-bottom: 8px; }
+.evidence-card h3 { margin: 0 0 10px; font-size: 23px; line-height: 1.2; letter-spacing: -.025em; }
+.evidence-card p { margin: 0; font-size: 15px; line-height: 1.65; color: #6e6e73; }
+.evidence-card strong { color: #1d1d1f; }
+.evidence-card .reading { margin-top: 12px; font-size: 13px; }
+.results-source { margin: 30px 0 0; font-size: 12px; color: #6e6e73; }
+@media (max-width: 760px) {
+  #results { padding: 56px 0; }
+  .evidence { grid-template-columns: 1fr; gap: 36px; max-width: 480px; margin: 30px auto 0; }
+}
+
+/* ---------- citation ---------- */
+pre {
+  background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px;
+  padding: 22px; font-family: var(--mono); font-size: 14.5px; line-height: 1.6;
+  overflow-x: auto; color: var(--ink);
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">ITA-LaCAM</div>
+    <div class="links">
+      <a href="index.html#abstract">Abstract</a>
+      <a href="index.html#demos">Live demos</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#method">Method</a>
+      <a href="index.html#results">Results</a>
+      <a href="index.html#citation">Citation</a>
+    </div>
+    <div class="language-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-language="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Research · arXiv:2609.14208 · cs.RO</div>
+    <h1>ITA-LaCAM: a complete and scalable TAPF solver via assignment-aware configuration-space search</h1>
+    <p class="authors">
+      Yimin Tang<sup>1,3</sup> · Han Zhang<sup>3</sup> · Shao-Hung Chan<sup>3</sup> ·
+      Junsoo Kim<sup>1</sup> · Erdem Bıyık<sup>1</sup> · Sven Koenig<sup>2</sup> · Jingkai Chen<sup>3</sup>
+    </p>
+    <p class="affil"><sup>1</sup>University of Southern California &nbsp;·&nbsp; <sup>2</sup>University of California, Irvine &nbsp;·&nbsp; <sup>3</sup>Symbotic</p>
+    <div class="affiliation-logos">
+      <a href="https://www.usc.edu/" target="_blank" rel="noopener"><img class="logo-usc" src="scenes/logo-usc.png" width="1024" height="219" alt="University of Southern California (USC)"></a>
+      <a href="https://www.uci.edu/" target="_blank" rel="noopener"><img class="logo-uci" src="scenes/logo-uci.png" width="266" height="45" alt="UC Irvine"></a>
+      <a href="https://www.symbotic.com/" target="_blank" rel="noopener"><img class="logo-symbotic" src="scenes/logo-symbotic.svg" width="205" height="44" alt="Symbotic"></a>
+    </div>
+    <div class="btnrow">
+      <a class="btn primary" href="https://arxiv.org/abs/2609.14208">Paper</a>
+      <a class="btn" href="https://arxiv.org/html/2609.14208v1">HTML version</a>
+      <a class="btn" href="index.html#demos">Interactive demos ↓</a>
+    </div>
+  </div>
+</header>
+
+<section id="abstract">
+  <div class="narrow">
+    <h2>Abstract</h2>
+    <p class="lead">
+      Combined Target Assignment and Path Finding (TAPF) requires assigning targets to agents while
+      simultaneously planning collision-free paths.
+    </p>
+    <p>
+      We present <strong>ITA-LaCAM</strong>, a complete and scalable TAPF solver inspired by LaCAM and
+      ITA-CBS. In ITA-LaCAM, each joint-configuration node carries an agent-to-target matching. When a
+      successor is generated, ITA-LaCAM incrementally repairs the matching for the agents that moved and
+      uses the targets to guide PIBT successor generation. This design enables adaptive reassignment
+      without explicitly enumerating the combinatorial assignment space, while preserving LaCAM&rsquo;s
+      completeness and scalability.
+    </p>
+    <p>
+      Across 9,760 benchmark instances on eight maps with 5&ndash;200 agents, ITA-LaCAM solved
+      <strong>100%</strong> of the instances, compared with 95.6% for IR-TAPF configured with
+      DBS-Hungarian. ITA-LaCAM found an initial solution faster in <strong>84.0%</strong> of the
+      comparisons and achieved a lower sum of costs in <strong>65.0%</strong> of the instances solved by
+      both methods.
+    </p>
+    <div class="stats">
+      <div class="stat"><div class="num">100%</div><div class="lbl">of 9,760 instances solved within the 10&#8209;second limit, on all eight maps</div></div>
+      <div class="stat"><div class="num">84.0%</div><div class="lbl">of instances reach a first solution faster than IR&#8209;TAPF</div></div>
+      <div class="stat"><div class="num">65.0%</div><div class="lbl">of jointly solved instances end with a lower sum of costs</div></div>
+      <div class="stat"><div class="num">10.2%</div><div class="lbl">90% of paired solutions fall within this margin of the ITA&#8209;CBS optimum</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="demos">
+  <div class="wrap">
+    <h2>Live demos: multi-robot construction on top of the solver</h2>
+    <p style="max-width:780px">
+      The same assignment-aware search that solves TAPF benchmarks also drives these construction
+      simulations. Each round, the planner turns the current build state into a one-shot TAPF instance
+      &mdash; carriers, ready bricks, scaffold removals &mdash; solves it, and executes the joint paths.
+      Robots obey strict physics: moves are limited to |&Delta;h| &le; 1, a brick is laid only from an
+      adjacent stand at the right height, floating bricks need side adhesion or hanging support, and every
+      scaffold block is later stripped and returned to the depot. Drag to orbit, scroll to zoom.
+    </p>
+    <div class="player" id="player">
+      <div class="playerbar">
+        <button class="pbtn" id="growBtn" title="Toggle player height">⤢ 放大</button>
+        <button class="pbtn" id="fsBtn" title="Fullscreen">⛶ 全屏</button>
+        <a class="pbtn" id="newTabBtn" href="scenes/bridge.html" target="_blank" title="Open scene in a new tab">↗ 新标签页</a>
+      </div>
+      <iframe id="demoFrame" src="scenes/bridge.html?embed=1" title="LaCAM-TAPF construction demo" loading="lazy" allow="fullscreen"></iframe>
+      <div class="ctrls">
+        <button class="cbtn" id="ctlPlay" title="Play / pause">⏸</button>
+        <button class="cbtn" id="ctlReset" title="Restart">⟲</button>
+        <input type="range" id="ctlTimeline" min="0" max="100" value="0" step="1">
+        <span class="tlab" id="ctlLabel">t 0 / 0</span>
+        <label class="slab"><span id="speedLabel">Speed</span>
+          <input type="range" id="ctlSpeed" min="1" max="100" value="6">
+        </label>
+      </div>
+      <div class="chips" id="demoChips"></div>
+      <div class="hint">All scenes run the real planner tapes in your browser (three.js). Drag to orbit · scroll / pinch to zoom · ⌘- or Ctrl-drag (or middle-drag) to pan · double-click to recenter · timeline and speed above.</div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <h2>Built structures</h2>
+    <p style="max-width:780px">
+      BrickGPT-style brick lists (<a class="inline" href="https://avalovelace1.github.io/BrickGPT/">StableText2Brick</a>
+      voxel designs and a MOC instruction PDF) are assembled brick by brick by the robot crew, scaffold
+      included and stripped. Total makespan T counts every simulation timestep from first pick to last
+      scaffold return.
+    </p>
+    <div class="grid" id="galleryGrid"></div>
+    <table>
+      <thead><tr><th>Structure</th><th class="num">Bricks placed</th><th class="num">Scaffold blocks</th><th class="num">Robots</th><th class="num">Makespan T</th></tr></thead>
+      <tbody>
+        <tr><td>Brick car</td><td class="num">104</td><td class="num">10</td><td class="num">16</td><td class="num">792</td></tr>
+        <tr><td>Brick piano</td><td class="num">320</td><td class="num">161</td><td class="num">16</td><td class="num">3,624</td></tr>
+        <tr><td>Victorian brougham (with brick-built horse)</td><td class="num">138</td><td class="num">73</td><td class="num">16</td><td class="num">1,394</td></tr>
+        <tr><td>Brick guitar</td><td class="num">325</td><td class="num">268</td><td class="num">16</td><td class="num">5,382</td></tr>
+        <tr><td>Brick chair</td><td class="num">1,116</td><td class="num">996</td><td class="num">16</td><td class="num">7,526</td></tr>
+      </tbody>
+    </table>
+    <p class="muted" style="font-size:16px">
+      Every tape passes an independent validator: unit moves with |&Delta;h| &le; 1, no vertex or edge
+      collisions, placements stacked from legal stands, conservation of picks, placements, removals and
+      deposits, and exact final-terrain match.
+    </p>
+  </div>
+</section>
+
+<section id="method">
+  <div class="narrow">
+    <h2>Method</h2>
+    <p>
+      LaCAM&#42; performs an A*-like search over <em>joint configurations</em> and uses Priority
+      Inheritance with Backtracking (PIBT) to generate successors lazily, searching the full valid
+      configuration graph without enumerating the joint action space. The key observation: feasible future
+      transitions depend only on the current configuration, not on how it was reached &mdash; so extending
+      LaCAM&#42; from MAPF to TAPF only requires replacing fixed-target guidance with
+      <strong>assignment-aware guidance</strong>.
+    </p>
+    <p>
+      Where CBS-TA and IR-TAPF fix an assignment and only get path feedback after a complete MAPF solve,
+      ITA-LaCAM closes the assignment&harr;path-finding feedback loop <em>at every search node</em>.
+    </p>
+    <div class="method">
+      <div class="mcard"><span class="step">1</span>
+        <b>Matching in every node</b>
+        <p>Each high-level node stores a feasible minimum-distance agent-to-target matching computed with the
+        Hungarian algorithm over collision-agnostic shortest-path distances. The matching supplies the
+        temporary PIBT targets, the heuristic, and an assignment-dependent search cost.</p>
+      </div>
+      <div class="mcard"><span class="step">2</span>
+        <b>Incremental repair</b>
+        <p>When a successor configuration is generated, only the rows of agents that moved change. ITA-LaCAM
+        reuses the parent&rsquo;s matching and Hungarian dual variables and repairs those rows, updating the
+        assignment online without solving it from scratch at every node.</p>
+      </div>
+      <div class="mcard"><span class="step">3</span>
+        <b>PIBT with swap</b>
+        <p>Successor generation uses PIBT with priority inheritance, plus a swap rule for narrow-corridor
+        livelocks: when two agents must pass, the candidate order is reversed and the blocker takes the
+        vacated cell, creating a legal multi-step rearrangement.</p>
+      </div>
+      <div class="mcard"><span class="step">4</span>
+        <b>Complete and anytime</b>
+        <p>The assignment guides but never permanently prunes: every valid successor stays reachable through
+        lazy expansion, preserving LaCAM&#42;&rsquo;s completeness. After the first feasible solution, the
+        search continues within the budget and keeps its best incumbent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="results">
+  <div class="wrap">
+    <div class="results-intro">
+      <h2>Results</h2>
+      <p>9,760 test cases. Eight maps. A 10-second limit.<br>
+        ITA-LaCAM solved every case.</p>
+    </div>
+    <div class="evidence" aria-label="Figures 4, 5, and 6 from the ITA-LaCAM paper">
+      <figure class="evidence-card">
+        <a class="figure-link" href="scenes/paper_fig4_first_solution.png" target="_blank" rel="noopener" aria-label="View Figure 4 at full size">
+          <img src="scenes/paper_fig4_first_solution.png" width="656" height="538" alt="First-solution times: ITA-LaCAM versus IR-TAPF. Points below the diagonal favor ITA-LaCAM." loading="lazy">
+        </a>
+        <figcaption>
+          <span class="figure-label">FIGURE 4 · FIRST-SOLUTION TIME</span>
+          <h3>Faster in 84% of cases.</h3>
+          <p>Across <strong>9,760 test cases</strong>, ITA-LaCAM found a first solution sooner than IR-TAPF in <strong>84.0%</strong>. IR-TAPF timed out on 425 cases; ours solved all of them.</p>
+          <p class="reading">Below the diagonal = faster with ITA-LaCAM.</p>
+        </figcaption>
+      </figure>
+      <figure class="evidence-card">
+        <a class="figure-link" href="scenes/paper_fig5_ir_soc.png" target="_blank" rel="noopener" aria-label="View Figure 5 at full size">
+          <img src="scenes/paper_fig5_ir_soc.png" width="607" height="529" alt="IR-TAPF SOC divided by ITA-LaCAM SOC. Values above one favor ITA-LaCAM." loading="lazy">
+        </a>
+        <figcaption>
+          <span class="figure-label">FIGURE 5 · SOLUTION QUALITY</span>
+          <h3>Lower cost in 65%.</h3>
+          <p>Of <strong>9,335 cases solved by both methods</strong>, ITA-LaCAM achieved lower total arrival time (SOC) in <strong>65.0%</strong> versus IR-TAPF. SOC counts both movement and waiting.</p>
+          <p class="reading">Above 1 = lower cost with ITA-LaCAM.</p>
+        </figcaption>
+      </figure>
+      <figure class="evidence-card">
+        <a class="figure-link" href="scenes/paper_fig6_optimal_soc.png" target="_blank" rel="noopener" aria-label="View Figure 6 at full size">
+          <img src="scenes/paper_fig6_optimal_soc.png" width="607" height="529" alt="ITA-LaCAM SOC divided by optimal ITA-CBS SOC. One represents optimal cost." loading="lazy">
+        </a>
+        <figcaption>
+          <span class="figure-label">FIGURE 6 · OPTIMALITY GAP</span>
+          <h3>Just 1.6% above optimal.</h3>
+          <p>The <strong>median</strong> cost gap was <strong>1.6%</strong> on the 4,955 cases solved by both ITA-LaCAM and optimal ITA-CBS. 90% were within 10.2% of optimal.</p>
+          <p class="reading">Closer to 1 = closer to optimal. Paired cases only.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="results-source">Figures 4–6 from <a class="inline" href="https://arxiv.org/html/2609.14208v1">the paper</a>. Click any plot to enlarge. Original figures, CC BY-SA 4.0.</p>
+  </div>
+</section>
+
+<section class="alt" id="citation">
+  <div class="narrow">
+    <h2>Citation</h2>
+<pre>@article{tang2026italacam,
+  title   = {ITA-LaCAM: A Complete and Scalable TAPF Solver
+             via Assignment-Aware Configuration-Space Search},
+  author  = {Tang, Yimin and Zhang, Han and Chan, Shao-Hung and Kim, Junsoo
+             and B{\i}y{\i}k, Erdem and Koenig, Sven and Chen, Jingkai},
+  journal = {arXiv preprint arXiv:2609.14208},
+  year    = {2026}
+}</pre>
+  </div>
+</section>
+
+
+
+<script>
+const SCENES = [
+  ['scenes/bridge.html', 'Arch Bridge'],
+  ['scenes/column.html', 'Column'],
+  ['scenes/uscgate.html', 'USC Gate'],
+  ['scenes/index.html', 'Pyramid'],
+  ['scenes/scene.html', 'Giza Site'],
+  ['scenes/brickcar.html', 'Brick Car'],
+  ['scenes/symbot.html', 'SymBot'],
+  ['scenes/temple.html', 'Temple'],
+  ['scenes/colonnade.html', 'Colonnade'],
+  ['scenes/brougham.html', 'Victorian Brougham'],
+  ['scenes/horse.html', 'Trojan Horse'],
+  ['scenes/tommy.html', 'Tommy Trojan'],
+  ['scenes/brickpiano.html', 'Brick Piano'],
+  ['scenes/goldengate.html', 'Golden Gate Bridge'],
+  ['scenes/brickguitar.html', 'Brick Guitar'],
+  ['scenes/brickchair.html', 'Brick Chair'],
+];
+const chips = document.getElementById('demoChips');
+const frame = document.getElementById('demoFrame');
+const player = document.getElementById('player');
+const newTab = document.getElementById('newTabBtn');
+const ctlPlay = document.getElementById('ctlPlay');
+const ctlTimeline = document.getElementById('ctlTimeline');
+const ctlSpeed = document.getElementById('ctlSpeed');
+const ctlLabel = document.getElementById('ctlLabel');
+let scrubbing = false;
+function send(cmd, value) {
+  frame.contentWindow && frame.contentWindow.postMessage({ lacamCmd: { cmd, value } }, '*');
+}
+ctlPlay.onclick = () => send('toggle');
+document.getElementById('ctlReset').onclick = () => send('reset');
+ctlSpeed.oninput = e => send('speed', +e.target.value);
+ctlTimeline.addEventListener('pointerdown', () => { scrubbing = true; });
+ctlTimeline.addEventListener('pointerup', () => { scrubbing = false; });
+ctlTimeline.oninput = e => send('seek', +e.target.value);
+window.addEventListener('message', ev => {
+  const st = ev.data && ev.data.lacamState;
+  if (!st) return;
+  ctlPlay.textContent = st.playing ? '⏸' : '▶';
+  if (!scrubbing) {
+    ctlTimeline.max = st.T_END;
+    ctlTimeline.value = st.simT;
+  }
+  ctlLabel.textContent = `t ${st.t} / ${st.T}`;
+});
+function loadScene(f) {
+  frame.src = f + '?embed=1';
+  newTab.href = f;
+  ctlSpeed.value = 6;
+  ctlPlay.textContent = '⏸';
+}
+document.getElementById('fsBtn').onclick = () => {
+  if (document.fullscreenElement) document.exitFullscreen();
+  else frame.requestFullscreen ? frame.requestFullscreen() : frame.webkitRequestFullscreen();
+};
+document.getElementById('growBtn').onclick = function () {
+  player.classList.toggle('tall');
+  this.textContent = player.classList.contains('tall') ? '⤡ 还原' : '⤢ 放大';
+  window.syncLanguageControls?.();
+  player.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+};
+SCENES.forEach(([f, name], i) => {
+  const b = document.createElement('button');
+  b.className = 'chip' + (i === 0 ? ' on' : '');
+  b.textContent = name;
+  b.onclick = () => {
+    loadScene(f);
+    chips.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+    b.classList.add('on');
+  };
+  chips.appendChild(b);
+});
+
+const GALLERY = [
+  ['scenes/plan_brickchair_3d.png', 'Brick Chair', 'T = 7,526 · validator PASS', 'scenes/brickchair.html'],
+  ['scenes/plan_brickguitar_3d.png', 'Brick Guitar', 'T = 5,382 · validator PASS', 'scenes/brickguitar.html'],
+  ['scenes/plan_brickpiano_3d.png', 'Brick Piano', 'T = 3,624 · validator PASS', 'scenes/brickpiano.html'],
+  ['scenes/plan_brickcar_3d.png', 'Brick Car', 'T = 792 · validator PASS', 'scenes/brickcar.html'],
+  ['scenes/plan_brougham_3d.png', 'Victorian Brougham', 'T = 1,394 · brick-built horse', 'scenes/brougham.html'],
+  ['scenes/plan_goldengate_3d.png', 'Golden Gate Bridge', 'suspended cable erection', 'scenes/goldengate.html'],
+  ['scenes/plan_tommy_3d.png', 'Tommy Trojan', 'ascending float-chain sword', 'scenes/tommy.html'],
+  ['scenes/plan_symbot_3d.png', 'SymBot', 'case-carrying drive unit', 'scenes/symbot.html'],
+];
+const grid = document.getElementById('galleryGrid');
+GALLERY.forEach(([img, name, sub, page]) => {
+  const a = document.createElement('a');
+  a.className = 'card';
+  a.href='index.html#demos';
+  a.innerHTML = `<img src="${img}" alt="${name}"><div class="cap"><b>${name}</b><span>${sub}</span></div>`;
+  a.onclick = () => {
+    loadScene(page);
+    chips.querySelectorAll('.chip').forEach((c, i) => c.classList.toggle('on', SCENES[i][0] === page));
+  };
+  grid.appendChild(a);
+});
+</script>
+<script src="scenes/project-i18n.js"></script>
+</body>
+</html>

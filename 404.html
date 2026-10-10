@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="3;url=index.html">
     <title>Page not found — Yimin Tang</title>
     <style>
       body { margin: 0; font: 18px/1.5 Arial, sans-serif; color: #202124; }
@@ -18,7 +17,12 @@
       <p class="code">404</p>
       <h1>Page not found</h1>
       <p>This path does not exist. Returning to the homepage.</p>
-      <p><a href="./">Go home</a></p>
+      <p><a id="home-link" href="/">Go home</a></p>
     </main>
+    <script>
+      const home = location.hostname.endsWith('.github.io') ? '/yimintang-homepage/' : '/';
+      document.getElementById('home-link').href = home;
+      setTimeout(() => location.replace(home), 3000);
+    </script>
   </body>
 </html>

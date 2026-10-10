@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>维多利亚马车</title>
+<script>if(location.search.indexOf("embed")>=0){document.write('<style>html,body{background:#f3f4f6 !important}#hud,#hudbar,#scenenav{display:none !important}</style>');}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hud">
+  <h1>维多利亚马车</h1>
+  <div class="sub">MOC-194603 积木清单 → 整砖搬运放置：车体逐层砌筑，马匹逐砖砌筑，轮/车辕/双灯绑定锚点砖，脚手架用完拆除</div>
+  <div id="stats"></div>
+  <div id="controls">
+    <button id="playBtn">暂停</button>
+    <button id="resetBtn">重来</button>
+    <label style="font-size:11px;color:#8b98b3">速度
+      <input id="speed" type="range" min="1" max="100" value="6">
+    </label>
+  </div>
+  <input id="timeline" type="range" min="0" max="100" value="0">
+  <div id="legend">
+    <span class="dot" style="background:#e8b04a"></span>乐高结构（黑色车体 / 玻璃窗 / 红色座垫）<br>
+    <span class="dot" style="background:#8b99b0"></span>脚手架（送料梯，用完拆除）<br>
+    <span class="dot" style="background:#4a90d9"></span>机器人（顶上亮块 = 正在搬运）<br>
+    <span class="dot" style="background:#7bd88f"></span>料仓（取块 / 退还脚手架）<br>
+    <a href="index.html" style="color:#7ba7e8">→ 金字塔</a> ·
+    <a href="brickcar.html" style="color:#7ba7e8">→ 乐高小车</a> ·
+    <a href="brickchair.html" style="color:#7ba7e8">→ 乐高椅子</a>
+  </div>
+</div>
+<script src="three.min.js"></script>
+<script src="plan_brougham.js?v=4"></script>
+<script src="app.js?v=11"></script>
+</body>
+</html>
