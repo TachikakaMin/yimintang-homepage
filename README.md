@@ -78,3 +78,10 @@ provide an additional public entry.
 Removing Google runtime dependencies does not guarantee that GitHub Pages is
 reachable from every mainland network. This task does not provision a mainland
 hosting account or domain.
+
+## Browser verification
+
+[Recorded browser checks](validation/browser-results.json) exercise both local
+homepage previews; AutoStore pause, single-step, final-state and timeline seek;
+and construction playback, timeline seek and switching among 16 scenes. The
+checks run under the project URL prefix with all external requests blocked.

@@ -216,12 +216,12 @@ pre {
   <div class="wrap">
     <div class="brand">ITA-LaCAM</div>
     <div class="links">
-      <a href="project.html#abstract">Abstract</a>
-      <a href="project.html#demos">Live demos</a>
-      <a href="project.html#gallery">Gallery</a>
-      <a href="project.html#method">Method</a>
-      <a href="project.html#results">Results</a>
-      <a href="project.html#citation">Citation</a>
+      <a href="#abstract">Abstract</a>
+      <a href="#demos">Live demos</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#citation">Citation</a>
     </div>
     <div class="language-switch" role="group" aria-label="Language / 语言">
       <button type="button" data-language="en" lang="en" aria-pressed="true">EN</button>
@@ -247,7 +247,7 @@ pre {
     <div class="btnrow">
       <a class="btn primary" href="https://arxiv.org/abs/2609.14208">Paper</a>
       <a class="btn" href="https://arxiv.org/html/2609.14208v1">HTML version</a>
-      <a class="btn" href="project.html#demos">Interactive demos ↓</a>
+      <a class="btn" href="#demos">Interactive demos ↓</a>
     </div>
   </div>
 </header>
@@ -539,7 +539,7 @@ const grid = document.getElementById('galleryGrid');
 GALLERY.forEach(([img, name, sub, page]) => {
   const a = document.createElement('a');
   a.className = 'card';
-  a.href='project.html#demos';
+  a.href='#demos';
   a.innerHTML = `<img src="${img}" alt="${name}"><div class="cap"><b>${name}</b><span>${sub}</span></div>`;
   a.onclick = () => {
     loadScene(page);

@@ -22,6 +22,15 @@ class MirrorTests(unittest.TestCase):
         result = self.mirror.local_url(m.CONFIG['sources'][0]['url'], m.CONFIG['sources'][2]['url'], 'interactive/autostore/index.html')
         self.assertEqual(result, '../../index.html')
 
+    def test_section_anchor_does_not_reload_homepage(self):
+        result = self.mirror.local_url('#research', m.CONFIG['sources'][0]['url'], 'index.html')
+        self.assertEqual(result, '#research')
+
+    def test_external_css_font_prevents_publish(self):
+        self.mirror.files = {'style.css': b'@font-face{src:url(https://fonts.gstatic.com/font.woff2)}'}
+        with self.assertRaisesRegex(RuntimeError, 'External runtime dependencies'):
+            self.mirror.validate()
+
     def test_scene_navigation_is_crawled_but_translation_keys_are_not(self):
         code = "const SCENES = [['horse.html','Horse']]; const PAGE_EN={'missing.html':['Other']};"
         self.assertEqual(m.references(code, '.js'), ['horse.html'])

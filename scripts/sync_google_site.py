@@ -115,6 +115,8 @@ class Mirror:
         return None
 
     def local_url(self, url, base, destination):
+        if url.startswith(('#', '?')):
+            return url
         resolved = self.resolve(url, base)
         if not resolved:
             return url
@@ -258,6 +260,8 @@ class Mirror:
             text = data.decode()
             for reference in references(text, suffix):
                 parsed = urlsplit(html.unescape(reference))
+                if suffix in {'.css', '.js'} and parsed.scheme in {'http', 'https'}:
+                    external_runtime.append({'from': destination, 'url': reference})
                 if parsed.scheme or parsed.netloc or not parsed.path:
                     continue
                 target = posixpath.normpath(posixpath.join(posixpath.dirname(destination), parsed.path))

@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "page": "homepage",
+      "action": "Both local WebGL previews loaded; pause works",
+      "status": "pass"
+    },
+    {
+      "page": "interactive/autostore/index.html",
+      "action": "Pause, step, final state, timeline seek",
+      "before": "5 / 518",
+      "end": "518 / 518",
+      "middle": "259 / 518",
+      "status": "pass"
+    },
+    {
+      "page": "interactive/autostore/pyramid.html",
+      "action": "Pause, step, final state, timeline seek",
+      "before": "7 / 428",
+      "end": "428 / 428",
+      "middle": "214 / 428",
+      "status": "pass"
+    },
+    {
+      "page": "interactive/autostore/horse.html",
+      "action": "Pause, step, final state, timeline seek",
+      "before": "7 / 738",
+      "end": "738 / 738",
+      "middle": "369 / 738",
+      "status": "pass"
+    },
+    {
+      "page": "interactive/construction/index.html",
+      "action": "Playback, timeline seek, change scene",
+      "chips": 16,
+      "initial": "t 0 / 180",
+      "middle": "t 90 / 180",
+      "frame": "scenes/brougham.html?embed=1",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "badResponses": [],
+  "externalRequests": [],
+  "tested_commit": "1a0f3a062ede5a8f4632ec77c9d824ecb72fdc76",
+  "environment": {
+    "browser": "Google Chrome, headless WebGL",
+    "base_path": "/yimintang-homepage/",
+    "external_network": "all requests blocked"
+  }
+}
