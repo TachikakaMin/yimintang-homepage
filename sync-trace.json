@@ -930,6 +930,11 @@
     "method": "public-site"
   },
   {
+    "path": "photo0-transparent.webp",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/photo0-transparent.webp",
+    "method": "public-site"
+  },
+  {
     "path": "photo0.jpg",
     "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/photo0.jpg",
     "method": "public-site"
@@ -937,6 +942,21 @@
   {
     "path": "portrait.jpg",
     "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/portrait.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "portrait.webp",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/portrait.webp",
+    "method": "public-site"
+  },
+  {
+    "path": "posters/autostore.webp",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/posters/autostore.webp",
+    "method": "public-site"
+  },
+  {
+    "path": "posters/construction.webp",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/posters/construction.webp",
     "method": "public-site"
   },
   {
@@ -952,6 +972,11 @@
   {
     "path": "robots.jpg",
     "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/robots.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "robots.webp",
+    "source": "https://yimin-tang.gain-salvo-0t.chatgpt.site/robots.webp",
     "method": "public-site"
   },
   {

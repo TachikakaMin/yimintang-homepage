@@ -24,11 +24,16 @@
         "demos/construction/tommy.html",
         "index.html",
         "photo0-transparent.png",
+        "photo0-transparent.webp",
         "photo0.jpg",
         "portrait.jpg",
+        "portrait.webp",
+        "posters/autostore.webp",
+        "posters/construction.webp",
         "preview.js",
         "responsive.css",
         "robots.jpg",
+        "robots.webp",
         "style.css"
       ]
     },

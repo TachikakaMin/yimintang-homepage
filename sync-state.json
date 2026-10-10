@@ -17,7 +17,7 @@
       "status": "refreshed"
     }
   ],
-  "content_sha256": "39e4b015e5cc662f96da6628accc84bc3848b6df2f470216ba0aaeb8699b8c0e",
+  "content_sha256": "ff40033b283b6d0d6719dd4d81122010fb2c9d0dcd5c1848e99a624067186a59",
   "files": {
     "assets/mirror/document-34e99711826b419e.pdf": "c6bf010c38099f5281c24fad22ff87ab5c74ee04eb7e1089f698be9bd31c22a9",
     "assets/mirror/document-7a1b3a7c6b84c5f7.pdf": "7a1b3a7c6b84c5f70568792580c647f30dbab0f11d8758559729b799572fca92",
@@ -74,7 +74,7 @@
     "demos/construction/three.min.js": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
     "demos/construction/tommy.html": "93e223fed2c4df7e9d6f0eb20666d197451b989ef9b9135e38d14eaec9ebcdcb",
     "demos/construction/uscgate.html": "922be4ab804af23786cc646928d043b0e3141fe52b6d1cedd52b447bbf024a04",
-    "index.html": "797717bdc860faee8b20dec3da7b10258efad57ff35d7c1815e83a01a4dbc39c",
+    "index.html": "8106898473824e3f27cad2a07f0275e2d10f78c81fbc440c7fe4aeab2c266c7b",
     "interactive/autostore/app.js": "c19e94439a5f6b6b6a3b2850532d26a6795e19939bb8a04d8b9e2094bceeceb2",
     "interactive/autostore/dense.html": "7fded9ce829eedcf69a8b4d2d60be6cb0c32dcf31c631b7d7079f2328f520a08",
     "interactive/autostore/explorer.css": "8c7c95abe5c3e4a6d6045bebeae3a9ef7844cc504e46f8d9affa57045979f430",
@@ -211,12 +211,17 @@
     "interactive/construction/scenes/tommy.html": "93e223fed2c4df7e9d6f0eb20666d197451b989ef9b9135e38d14eaec9ebcdcb",
     "interactive/construction/scenes/uscgate.html": "922be4ab804af23786cc646928d043b0e3141fe52b6d1cedd52b447bbf024a04",
     "photo0-transparent.png": "70e7b8ebd081a85fa79a6ca14939e4ba602973768e97611ead658ecbc9185224",
+    "photo0-transparent.webp": "ad90ce5f7f7014df999257f9d5b0f5c9c248fc5d597d839fde431141fe208852",
     "photo0.jpg": "016425b0683628de81bacde9f34e08dba2a628bf0fa84faa153c6a12d518c121",
     "portrait.jpg": "3569641ea0d27c38b9ba94a8897154c67e18576fc46a6860397af28d5afd8f8c",
-    "preview.js": "fbd51af1ed3b181253257921b32c7fe92d0b251830e647b89d8eef2dda73a1bb",
+    "portrait.webp": "83c34a1f88a7616200d187f372bcf7681091af29c14cc695efb7c80a9c8c65dd",
+    "posters/autostore.webp": "1e1082ee94fef21a15a612792b8031d87911b47ac745bca50b7213f6893e822c",
+    "posters/construction.webp": "3ca99c97ac88d900b37afaeb045487c511f033b9388f3d22311da7547e0661bc",
+    "preview.js": "7d22885f0e70c2f86604c670ea8f56363a8d1c3505b816d908a9908f03e0d38a",
     "responsive.css": "c5eb54d3a181eaa28b81af3b7171f6af9a69d00803111377a0696c51d27086f6",
     "robots.jpg": "707c20123778fa9c0b5c7365e7da17aaf3d6cf1ad264c161a487fde24483ef78",
-    "style.css": "69bb147e2b84d141a68fb554af62831d43d6ded53899fb324460b04fb0f32bf4"
+    "robots.webp": "b7080c25cff515a136133ee1fe9c3d5789af43b313b6a9cb9a8c9c4ac26e803a",
+    "style.css": "09779a84a82a460d7975be85ac4abaace5c2d497091589d1a1a7ccdb0d8b7cba"
   },
   "html_pages": 49,
   "mode": "complete-public-sites",
@@ -237,7 +242,7 @@
       "url": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/"
     }
   ],
-  "total_bytes": 60884769,
+  "total_bytes": 61048191,
   "validation": {
     "external_runtime_dependencies": [],
     "missing_local_links": []

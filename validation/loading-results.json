@@ -1,0 +1,101 @@
+{
+  "profile": {
+    "latencyMs": 100,
+    "downloadBytesPerSecond": 200000,
+    "cache": "disabled",
+    "viewport": "1440x1000"
+  },
+  "measurement_note": "Single cold-cache Chrome diagnostic run per URL and version; CDN/network timing varies. Top-target network emulation does not guarantee equal throttling of cross-origin iframe targets. iframe LCP starts at iframe navigation, not at opening Google Sites.",
+  "before": {
+    "google_embed": {
+      "url": "https://sites.google.com/view/yimintang/",
+      "parent_to_homepage_ms": 8894.2,
+      "homepage_lcp_ms": 2120,
+      "homepage_fcp_ms": 1896,
+      "homepage_ttfb_ms": 782.2,
+      "homepage_load_ms": 2074,
+      "portrait_complete": true,
+      "demo_frames_started": 0,
+      "long_task_ms": 0
+    },
+    "direct": {
+      "url": "https://yimin-tang.gain-salvo-0t.chatgpt.site/",
+      "parent_to_homepage_ms": 0.0,
+      "homepage_lcp_ms": 4560,
+      "homepage_fcp_ms": 572,
+      "homepage_ttfb_ms": 229.5,
+      "homepage_load_ms": 0,
+      "portrait_complete": false,
+      "demo_frames_started": 2,
+      "long_task_ms": 429
+    }
+  },
+  "after": {
+    "google_embed": {
+      "url": "https://sites.google.com/view/yimintang/",
+      "parent_to_homepage_ms": 9030.1,
+      "homepage_lcp_ms": 592,
+      "homepage_fcp_ms": 428,
+      "homepage_ttfb_ms": 72,
+      "homepage_load_ms": 152.2,
+      "portrait_complete": true,
+      "demo_frames_started": 0,
+      "long_task_ms": 0
+    },
+    "direct": {
+      "url": "https://yimin-tang.gain-salvo-0t.chatgpt.site/",
+      "parent_to_homepage_ms": 0.0,
+      "homepage_lcp_ms": 2148,
+      "homepage_fcp_ms": 1536,
+      "homepage_ttfb_ms": 1103,
+      "homepage_load_ms": 2226.5,
+      "portrait_complete": true,
+      "demo_frames_started": 0,
+      "long_task_ms": 0
+    }
+  },
+  "first_screen_portrait_and_art_bytes": {
+    "before": 3508891,
+    "after": 105096
+  },
+  "functionality": [
+    {
+      "viewport": 1440,
+      "firstViewportFrameRequests": [],
+      "portrait": [
+        {
+          "source": "http://127.0.0.1:8883/portrait.webp",
+          "loaded": true
+        },
+        {
+          "source": "http://127.0.0.1:8883/photo0-transparent.webp",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "previews": "Both initialized after scroll",
+      "pauseThenPlay": "pass",
+      "errors": []
+    },
+    {
+      "viewport": 390,
+      "firstViewportFrameRequests": [],
+      "portrait": [
+        {
+          "source": "http://127.0.0.1:8883/portrait.webp",
+          "loaded": true
+        },
+        {
+          "source": "http://127.0.0.1:8883/photo0-transparent.webp",
+          "loaded": true
+        }
+      ],
+      "overflow": false,
+      "previews": "Both initialized after scroll",
+      "pauseThenPlay": "pass",
+      "errors": []
+    }
+  ],
+  "deployed_site_version": 19,
+  "source_commit": "0f6ba8659d9b489aeccf44995821b9406a4705f1"
+}

@@ -232,7 +232,7 @@ class Mirror:
                 if not drive or drive.group(1) not in CONFIG['drive_files']:
                     return match.group(0)
                 local = replace_drive(drive)
-                return '<video controls preload="metadata" playsinline src="' + local + '" aria-label="Project video" style="width:100%;height:100%;object-fit:contain"></video>'
+                return '<video controls preload="none" playsinline src="' + local + '" aria-label="Project video" style="width:100%;height:100%;object-fit:contain"></video>'
             text = re.sub(r'<iframe\b[^>]*>\s*</iframe>', replace_frame, text, flags=re.I)
             text = drive_pattern.sub(replace_drive, text)
             # YouTube stays explicitly outbound; the homepage loads no blocked
