@@ -17,7 +17,7 @@
       "status": "refreshed"
     }
   ],
-  "content_sha256": "c219329326dd284ea6e2fcb33926997868e3f16fd9ed70e03a3401fb3c8d6a88",
+  "content_sha256": "4fe8f7f4466e9c969116aee7c0b4c9fb84a8ac9ea119646b4dd708b9326d3f9a",
   "files": {
     "assets/mirror/document-34e99711826b419e.pdf": "c6bf010c38099f5281c24fad22ff87ab5c74ee04eb7e1089f698be9bd31c22a9",
     "assets/mirror/document-7a1b3a7c6b84c5f7.pdf": "7a1b3a7c6b84c5f70568792580c647f30dbab0f11d8758559729b799572fca92",
@@ -74,7 +74,7 @@
     "demos/construction/three.min.js": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
     "demos/construction/tommy.html": "93e223fed2c4df7e9d6f0eb20666d197451b989ef9b9135e38d14eaec9ebcdcb",
     "demos/construction/uscgate.html": "922be4ab804af23786cc646928d043b0e3141fe52b6d1cedd52b447bbf024a04",
-    "index.html": "cef3e213e3eebb311a10bba09c77e8b2affe16742c75ac15886deac83e7dc78c",
+    "index.html": "abf247a092d8af6dff18aa391528a491cce235efe38089aa50f43cd080ce7be4",
     "interactive/autostore/app.js": "c19e94439a5f6b6b6a3b2850532d26a6795e19939bb8a04d8b9e2094bceeceb2",
     "interactive/autostore/dense.html": "7fded9ce829eedcf69a8b4d2d60be6cb0c32dcf31c631b7d7079f2328f520a08",
     "interactive/autostore/explorer.css": "8c7c95abe5c3e4a6d6045bebeae3a9ef7844cc504e46f8d9affa57045979f430",
@@ -242,7 +242,7 @@
       "url": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/"
     }
   ],
-  "total_bytes": 61048114,
+  "total_bytes": 61047605,
   "validation": {
     "external_runtime_dependencies": [],
     "missing_local_links": []
