@@ -2,6 +2,12 @@
   'use strict';
   // Translate content in place so the player, controls, and their listeners survive a switch.
   const translations = [
+    ["#real-world h2", ["真实机器人与未来应用"]],
+    ["#real-world .lead", ["ITA-LaCAM 能否用于现实中的多机器人协同建造？"]],
+    [".hardware-intro", ["哈佛 TERMES 和 NASA ARMADAS 展示了机器人利用离散模块搭建结构的能力。这些系统启发了 ITA-LaCAM 的潜在应用：随着结构逐步形成，联合分配当前可执行的建造目标，并规划无碰撞路径。"]],
+    [".hardware-description", ["机器人搬运砖块、搭建台阶，并爬上逐步形成的结构。未来可扩展 ITA-LaCAM，为机器人分配可达的放砖任务，协调共用通道上的交通，同时满足支撑和攀爬约束。", "机器人协作搬运、放置和紧固模块。未来可扩展 ITA-LaCAM，协调不同机器人角色及其在格架上的路径，并显式处理交接与装配依赖。"]],
+    [".hardware-source", ["视频来源：哈佛大学 Wyss 研究所 · 原始演示 ↗", "视频来源：NASA · 原始演示 ↗"]],
+    [".hardware-note", ["<strong>未来研究方向。</strong>以上是哈佛和 NASA 独立完成的硬件演示，未使用 ITA-LaCAM。将我们的规划器用于这些系统，需要适配机器人的运动与碰撞模型、建造约束及执行反馈。实机验证仍是未来工作。"]],
     ['nav .links a', ['摘要', '交互演示', '建造成品', '方法', '实验结果', '引用']],
     ['.kicker', ['研究论文 · arXiv:2609.14208 · cs.RO']],
     ['h1', ['ITA-LaCAM：通过融合目标分配的配置空间搜索，实现完备、可扩展的 TAPF 求解']],

@@ -208,6 +208,15 @@ pre {
   padding: 22px; font-family: var(--mono); font-size: 14.5px; line-height: 1.6;
   overflow-x: auto; color: var(--ink);
 }
+
+.hardware-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px; margin:30px 0; }
+.hardware-grid figure { min-width:0; }
+.hardware-grid video { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; background:#111; border-radius:12px; }
+.hardware-grid h3 { margin:18px 0 10px; }
+.hardware-grid p { font-size:16px; }
+.hardware-source { font-size:14px; }
+.hardware-note { border-left:3px solid var(--accent); padding:12px 20px; background:var(--bg-soft); font-size:16px; }
+@media(max-width:760px) { .hardware-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -313,6 +322,25 @@ pre {
       <div class="chips" id="demoChips"></div>
       <div class="hint">All scenes run the real planner tapes in your browser (three.js). Drag to orbit · scroll / pinch to zoom · ⌘- or Ctrl-drag (or middle-drag) to pan · double-click to recenter · timeline and speed above.</div>
     </div>
+  </div>
+</section>
+
+<section id="real-world">
+  <div class="wrap">
+    <h2>Real robots, future applications</h2>
+    <p class="lead">Could ITA-LaCAM help coordinate construction robots in the real world?</p>
+    <p class="hardware-intro">Harvard TERMES and NASA ARMADAS show robots building structures from discrete blocks. These systems motivate a possible application of ITA-LaCAM: jointly assigning available construction targets and planning collision-free routes as the structure grows.</p>
+    <div class="hardware-grid">
+      <figure>
+        <video controls playsinline preload="none" poster="media/harvard-termes.jpg" aria-label="Harvard TERMES robot construction video"><source src="media/harvard-termes.mp4" type="video/mp4"></video>
+        <figcaption><h3>Harvard TERMES</h3><p class="hardware-description">Robots carry bricks, build stairs, and climb the growing structure. A potential ITA-LaCAM extension could assign reachable placement tasks and coordinate traffic on shared routes, while respecting support and climbing constraints.</p><a class="inline hardware-source" href="https://wyss.harvard.edu/media-post/termes/" target="_blank" rel="noopener">Video credit: Wyss Institute at Harvard University · Original demo ↗</a></figcaption>
+      </figure>
+      <figure>
+        <video controls playsinline preload="none" poster="media/nasa-armadas.jpg" aria-label="NASA ARMADAS robot construction video"><source src="media/nasa-armadas.mp4" type="video/mp4"></video>
+        <figcaption><h3>NASA ARMADAS</h3><p class="hardware-description">Robots transport, place, and fasten modular building blocks. A potential ITA-LaCAM extension could coordinate compatible robot roles and routes on the lattice, with explicit handoff and assembly dependencies.</p><a class="inline hardware-source" href="https://www.nasa.gov/general/robot-team-builds-high-performance-digital-structure-for-nasa/" target="_blank" rel="noopener">Video credit: NASA · Original demo ↗</a></figcaption>
+      </figure>
+    </div>
+    <p class="hardware-note"><strong>Research direction.</strong> These are independent hardware demonstrations from Harvard and NASA. They do not use ITA-LaCAM. Applying our planner would require robot-specific motion and collision models, construction constraints, and execution feedback. Hardware validation remains future work.</p>
   </div>
 </section>
 

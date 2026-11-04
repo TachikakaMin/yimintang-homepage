@@ -350,6 +350,26 @@
     "method": "public-site"
   },
   {
+    "path": "interactive/construction/media/harvard-termes.jpg",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/media/harvard-termes.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/media/harvard-termes.mp4",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/media/harvard-termes.mp4",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/media/nasa-armadas.jpg",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/media/nasa-armadas.jpg",
+    "method": "public-site"
+  },
+  {
+    "path": "interactive/construction/media/nasa-armadas.mp4",
+    "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/media/nasa-armadas.mp4",
+    "method": "public-site"
+  },
+  {
     "path": "interactive/construction/scenes/BROUGHAM_BUILD_PLAN.md",
     "source": "https://multi-robot-construction-demo.gain-salvo-0t.chatgpt.site/scenes/BROUGHAM_BUILD_PLAN.md",
     "method": "public-site"
