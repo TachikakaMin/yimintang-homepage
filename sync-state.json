@@ -15,13 +15,23 @@
     {
       "path": "assets/mirror/video-90878572cf36a1e9.mov",
       "status": "refreshed"
+    },
+    {
+      "path": "assets/mirror/mujoco-auto-research-cad.mp4",
+      "status": "refreshed"
+    },
+    {
+      "path": "assets/mirror/mujoco-auto-research-closeup-2x.mp4",
+      "status": "refreshed"
     }
   ],
-  "content_sha256": "6b582f6f6468169d46ef11686fe94ea0393b8f6c5cdc677017fed151590031cd",
+  "content_sha256": "c42d1baee21f4e346330651c2c693bd49866f464bb97b4ec78a4bd0b4d0988fd",
   "files": {
     "assets/mirror/document-34e99711826b419e.pdf": "c6bf010c38099f5281c24fad22ff87ab5c74ee04eb7e1089f698be9bd31c22a9",
     "assets/mirror/document-7a1b3a7c6b84c5f7.pdf": "7a1b3a7c6b84c5f70568792580c647f30dbab0f11d8758559729b799572fca92",
     "assets/mirror/document-9f2b023df4cd67fc.pdf": "9f2b023df4cd67fc614f42013d2fdb0ffaef2ef6802294ea152ce56bb4a73794",
+    "assets/mirror/mujoco-auto-research-cad.mp4": "11d6b77b09d7edb08898df3f5a21ab18adc2bd48c162e03a96bd6943da12383f",
+    "assets/mirror/mujoco-auto-research-closeup-2x.mp4": "1154a9f147f3ea2c2a9b235e92194628618a7dd0420f83b2556ac0766e185cf6",
     "assets/mirror/video-90878572cf36a1e9.mov": "90878572cf36a1e90e8f83d1f7da4ad89bb2ccab92eea755d72ff458c99d5746",
     "assets/video-posters/MOU2yI3wWds.jpg": "8f467aab6b93bc7bd32787a534d5a6cfc8a3f9db10937c5c9361db83b620e23a",
     "assets/video-posters/Y-v3h_27PXk.jpg": "5101c68c88d818a1f5e1378080d3973e44da9e329b6dd434ea4000615491daf4",
@@ -74,7 +84,7 @@
     "demos/construction/three.min.js": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
     "demos/construction/tommy.html": "93e223fed2c4df7e9d6f0eb20666d197451b989ef9b9135e38d14eaec9ebcdcb",
     "demos/construction/uscgate.html": "922be4ab804af23786cc646928d043b0e3141fe52b6d1cedd52b447bbf024a04",
-    "index.html": "219ab890a69766fdcdd157f938febdf2afe2e6e1310c269e36e6e402dd34752a",
+    "index.html": "10951a977c603bf17677be2a7748fcba3c4bf9b0c56644dfc901725f82eb6e22",
     "interactive/autostore/app.js": "c19e94439a5f6b6b6a3b2850532d26a6795e19939bb8a04d8b9e2094bceeceb2",
     "interactive/autostore/dense.html": "7fded9ce829eedcf69a8b4d2d60be6cb0c32dcf31c631b7d7079f2328f520a08",
     "interactive/autostore/explorer.css": "8c7c95abe5c3e4a6d6045bebeae3a9ef7844cc504e46f8d9affa57045979f430",
@@ -94,7 +104,7 @@
     "interactive/autostore/site.css": "af0e9152994257cd930174a46c3224e65fac84fc24c77fb30dff9395e5558c02",
     "interactive/autostore/style.css": "71b1fc8b0e955325d8b27f4361cc342350e6cc32ef39a3c2ef42adae6bbfab74",
     "interactive/autostore/three.min.js": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
-    "interactive/construction/index.html": "861b07e293d204f2464f8b0d17b32cd8a5b10511ca93fd93dad372bdc4260e66",
+    "interactive/construction/index.html": "726a04fbd21cb18ddae752b04703a73ec140358d667f1d84866a89bb84b0cd94",
     "interactive/construction/media/harvard-termes.jpg": "5a867d97e1fbcc8793c882726e1b78b213587aca45a05b355489df71693973da",
     "interactive/construction/media/harvard-termes.mp4": "a23f8b4a4fc2cbe3e26ee2cb0302265417ae56af52d9a00f075c4c573bea8ada",
     "interactive/construction/media/nasa-armadas.jpg": "6ed820cda14fba2aa5478699ae3d3ce5e0c6707b5a6d9f43ac1cf7164baece2b",
@@ -246,7 +256,7 @@
       "url": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/"
     }
   ],
-  "total_bytes": 110229925,
+  "total_bytes": 134403070,
   "validation": {
     "external_runtime_dependencies": [],
     "missing_local_links": []
