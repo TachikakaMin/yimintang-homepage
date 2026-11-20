@@ -56,6 +56,9 @@ Open <http://localhost:8080/>. Python 3.12+ and `curl` are required; no Python
 packages or browser runtime CDNs are needed. A local source checkout can seed
 an initial import with `--source-dir name=/absolute/public/directory`.
 
+Homepage navigation and document links open in a new tab so they also work
+inside the Google Sites embed. In-page section links keep their scroll behavior.
+
 ## Media and external links
 
 The CV, two slide decks, and public Drive project video are hosted in this
