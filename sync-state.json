@@ -25,9 +25,9 @@
       "status": "refreshed"
     }
   ],
-  "content_sha256": "c5d8ec2376877cdea498cc883c4bccef0ffdce8523f2613a42f239a861d3c7c2",
+  "content_sha256": "f28e5d4fe1f2a6eb37e0d203520b8f58b60a9d3b0e9c3b25704c628ca02c7f9e",
   "files": {
-    "assets/mirror/document-34e99711826b419e.pdf": "821be8e0edb2de02e3427d6fd02c524cc02e28f59b71f820098c5468b3bcd415",
+    "assets/mirror/document-34e99711826b419e.pdf": "35372337035895612f1d5580e0984029f458996fd35ec51e68ef29e26b505334",
     "assets/mirror/document-7a1b3a7c6b84c5f7.pdf": "7a1b3a7c6b84c5f70568792580c647f30dbab0f11d8758559729b799572fca92",
     "assets/mirror/document-9f2b023df4cd67fc.pdf": "9f2b023df4cd67fc614f42013d2fdb0ffaef2ef6802294ea152ce56bb4a73794",
     "assets/mirror/mujoco-auto-research-cad.mp4": "11d6b77b09d7edb08898df3f5a21ab18adc2bd48c162e03a96bd6943da12383f",
@@ -256,7 +256,7 @@
       "url": "https://lacam-autostore-demo.gain-salvo-0t.chatgpt.site/"
     }
   ],
-  "total_bytes": 134406150,
+  "total_bytes": 134406725,
   "validation": {
     "external_runtime_dependencies": [],
     "missing_local_links": []
